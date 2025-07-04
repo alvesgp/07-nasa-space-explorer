@@ -22,7 +22,7 @@
 /* Base page styles */
 body {
   font-family: 'Public Sans', Arial, sans-serif;
-  background-color: var(--nasa-light);
+  background-color: #aeb0b5; /* Updated to NASA cool gray light */
   color: var(--nasa-dark);
   padding: 20px;
   min-height: 100vh;
@@ -32,7 +32,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: #fff;
+  background: #f1f1f1;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0,50,160,0.07);
   padding: 32px 24px;
@@ -50,12 +50,12 @@ body {
 }
 
 .logo {
-  width: 140px;
-  margin-right: 18px;
-  border-radius: 8px;
-  border: 2px solid var(--nasa-red);
-  background: #fff;
-  padding: 4px;
+  width: 180px;
+  margin-right: 10px;           /* More space to the right of the logo */
+  border-radius: 0;              /* Sharp edges for the border */
+
+  padding: 7px;                 /* More space around the logo inside the border */
+  box-sizing: border-box;        /* Ensure padding is included in width */
 }
 
 h1, h2, h3, .display-large {
@@ -142,7 +142,7 @@ button:hover {
   gap: 24px;
   padding: 24px;
   justify-content: center;
-  background: var(--nasa-gray);
+  background: #d6d7d9; /* Updated to requested color */
   border-radius: 8px;
 }
 
@@ -207,7 +207,7 @@ button:hover {
   color: #666;
 }
 
-.placeholder-icon {
+.placeholder-icon { 
   font-size: 48px;
   margin-bottom: 20px;
 }
@@ -219,6 +219,18 @@ button:hover {
   left: 0; top: 0; width: 100vw; height: 100vh;
   background: rgba(0,0,0,0.7);
   display: flex; align-items: center; justify-content: center;
+}
+#modalVideo {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+} 
+#modalDate {
+  margin-bottom: 4px; 
+}
+
+#modalExplanation {
+  margin-top: 3px; 
 }
 .modal-content {
   background: #fff;
@@ -263,4 +275,23 @@ button:hover {
 /* Use Inter for large display and headings */
 h1, h2, h3, .display-large {
   font-family: 'Inter', 'Barlow', 'Verdana', Arial, sans-serif;
+}
+
+/* Space Fact section */
+.space-fact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-family: 'Public Sans', Arial, sans-serif;
+  color: #061f4a;
+  background: var(--nasa-light);
+  border-left: 8px solid var(--nasa-red);
+  border-radius: 8px;
+  margin: 0 auto 36px auto;
+  padding: 26px 36px;
+  max-width: 700px;
+  box-shadow: 0 2px 12px rgba(0,50,160,0.08);
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
